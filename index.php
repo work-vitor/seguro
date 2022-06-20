@@ -58,7 +58,6 @@ include("model/class_crud.php");
                 <ul>
                     <li><a href=""><img src="img/up/<?php echo $Fetch['nome_logo']; ?>" alt="logo_maktub" width="220" height="50"></a></li>
                 </ul>
-
         <?php
             }
         }

@@ -48,15 +48,19 @@ if (isset($_GET['id'])) {
     <div class="block_az">
 
         <div class="container">
-            <h1>FORMULÁRIO OPERADORA </h1>
-            <h1>FORMULÁRIO PLANO</h1>
+            <a href="cadOP.php">
+                <h1>FORMULÁRIO OPERADORA </h1>
+            </a>
+            <a href="cadPL.php">
+                <h1>FORMULÁRIO PLANO</h1>
+            </a>
         </div>
 
         <div class="cad">
             <form method="post" action="../controller/ControllerOp.php" class="form" enctype="multipart/form-data">
                 <input type="hidden" name="Acao" id="Acao" value="<?php echo $Acao; ?>">
                 <input type="hidden" name="id" id="id" value="<?php echo $id; ?>">
-                
+
 
                 <div>
                     <h2>OPERADORA</h2>
@@ -67,12 +71,12 @@ if (isset($_GET['id'])) {
                     </label>
 
                     <?php
-                        if(isset($_GET['id'])){
-                            echo '<input type="hidden" name="ver_logo" id="ver_logo" value="<?php echo $nome_logo; ?>">';
-                            echo '<img src="../img/up/'.$nome_logo.'" alt="logo_maktub" width="220" height="50">';
-                        }else{
-                            echo ' <input type="file" name="pic" value="<?php echo $nome_logo; ?>" placeholder="Selecione ou arraste um arquivo">';
-                        }
+                    if (isset($_GET['id'])) {
+                        echo '<input type="hidden" name="ver_logo" id="ver_logo" value="<?php echo $nome_logo; ?>">';
+                        echo '<img src="../img/up/' . $nome_logo . '" alt="logo_maktub" width="220" height="50">';
+                    } else {
+                        echo ' <input type="file" name="pic" value="<?php echo $nome_logo; ?>" placeholder="Selecione ou arraste um arquivo">';
+                    }
 
                     ?>
                 </div>

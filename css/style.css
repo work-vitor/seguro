@@ -58,16 +58,23 @@ li a {
     padding: 10%;
 }
 
-.block_az h1 {
+.block_az h1{
     color: #fff;
     margin: 0% 5%;
+}
+
+
+.block_az a:link {
+    text-decoration: none;
 }
 
 .container {
     display: flex;
     justify-content: center;
-
+    
 }
+
+
 
 .cad {
 
@@ -181,11 +188,10 @@ li a {
 }
 
 .planos{
-    height: 100%;
-    width: 50%;
+    height: 0;
+    width: 40%;
     margin-top: 28%;
-    margin-left: 25%;
+    margin-left: 28%;
     display: flex;
     justify-content: center;
-    flex-basis: 100%;
 }
