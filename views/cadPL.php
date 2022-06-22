@@ -53,7 +53,7 @@ include("../model/class_crud.php");
         </div>
 
         <div class="cad">
-            <form method="post" action="../controller/ControllerOp.php" class="form" enctype="multipart/form-data">
+            <form method="post" action="../controller/ControllerPl.php" class="form" >
 
 
                 <div>
@@ -66,7 +66,7 @@ include("../model/class_crud.php");
                     </label>
                     
 
-                    <select name="select">
+                    <select name="id_op">
                         <?php
                         $crud = new ClassCrud();
                         $BFetch = $crud->selectDB(
@@ -112,7 +112,7 @@ include("../model/class_crud.php");
                             <h4>Cobertura *</h4>
                         </label>
 
-                        <select name="select">
+                        <select name="cobertura">
                             <option value="Hospitalar">Hospitalar</option>
                             <option value="Ambolatorial + Hospital com Obstétrica">Ambolatorial + Hospital com Obstétrica</option>
                         </select>
