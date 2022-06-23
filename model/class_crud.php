@@ -43,6 +43,13 @@ class ClassCrud extends Conexao
 		return $this->Crud;
 	}
 
+    //Teste
+    public function innerDB($Campos , $Tabela , $Condicao , $Parametros){
+		$this->preparedStatements("select {$Campos} from {$Tabela} {$Condicao}" , $Parametros);
+        //INNER JOIN plano ON id_operadora=? inner join hospital on id_op=?
+		return $this->Crud;
+	}
+
 
 	//Deletar dados no DB
 

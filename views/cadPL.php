@@ -172,19 +172,19 @@ include("../model/class_crud.php");
                 </tr>
 
                 <?php
+                $nome_pl = 26;
+                $nome_pl1 = 8;
                 $crud = new ClassCrud();
-                $BFetch = $crud->selectDB(
-                    "*",
-                    "operadora",
-                    "",
-                    array()
-                );
+                $BFetch = $crud->selectDB("*", "operadora", "INNER JOIN plano ON id_operadora=? INNER JOIN hospital on id_op=?", array($nome_pl, $nome_pl1));
 
                 while ($Fetch = $BFetch->fetch(PDO::FETCH_ASSOC)) {
 
                 ?>
                     <tr>
                         <td><?php echo $Fetch['nome_op']; ?></td>
+                        <td><?php echo $Fetch['nome_plano']; ?></td>
+                        <td><?php echo $Fetch['nome_hosp']; ?></td>
+                        
 
                         <td>
                             <a href="<?php echo "cadOP.php?id={$Fetch['id']};" ?>"><img src="https://img.icons8.com/material/24/000000/edit.png"></a>
